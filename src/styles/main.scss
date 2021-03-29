@@ -5,3 +5,30 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+:root {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $black;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.section-main {
+    background-image: url(../img/image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.main {
+    display: block;
+    text-align: center;
+}

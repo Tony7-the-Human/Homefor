@@ -24,7 +24,7 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="styles/main.css">
 
     <style>
@@ -33,24 +33,52 @@
 </head>
 
 <body>
+
     <section class="section-main">
         @@include("../blocks/modules/header/header.html")
         <div class="wrapper">
-            <div class="main">
-                <div class="main-text">
-                    <h1 class="title">Жилой комплекс HOMEFOR -<br> это жизнь с комфортом</h1>
-                    <div class="ml">
-                        <p class="main-text__description">Мы охватываем все важные этапы проектирование и строительство<br> дома, а также повседневная эксплуатация после окончания</p>
-                        <img class="main-text__image" src="../img/image-main.png" alt="">
-                        <a href="" class="btn">Подробнее</a>
+            <div class="slider">
+                <div class="slider-child">
+                    <div class="main">
+                        <div class="main-text">
+                            <h1 class="title">Жилой комплекс HOMEFOR -<br>это жизнь с комфортом</h1>
+
+                            <p class="main-text__description">Мы охватываем все важные этапы проектирование и строительство<br> дома, а также повседневная эксплуатация после окончания</p>
+
+                            <a href="" class="btn">Подробнее</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-child">
+                    <div class="main">
+                        <div class="main-text">
+                            <h1 class="title">HOMEFOR -<br>это жизнь с комфортом</h1>
+                            <div class="ml">
+                                <p class="main-text__description">Мы охватываем все важные этапы проектирование и строительство<br> дома, а также повседневная эксплуатация после окончания</p>
+                                <img class="main-text__image" src="../img/image-main.png" alt="">
+                                <a href="" class="btn">Подробнее</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div>
+        </div>
     </section>
     <!-- /section main -->
 
     @@include("../blocks/modules/footer/footer.html")
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
+        });
+    </script>
 
     <script src="js/main.js"></script>
     <script src="js/vendor.js"></script>

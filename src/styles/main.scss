@@ -13,6 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: $white;
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 .wrapper {
@@ -30,11 +31,11 @@ body {
 
 .main {
     display: block;
-    margin-right: 84px;
+    text-align: center;
     &-text {
         text-align: center;
         &__description {
-            margin-top: 35px;
+            margin: 35px 0px 68px;
             line-height: 1.34;
         }
     }
@@ -46,4 +47,73 @@ body {
     font-weight: 700;
     text-align: center;
     line-height: 70px;
+}
+
+.btn {
+    display: inline-block;
+    color: $black;
+    background-color: #fffffe;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 70px;
+    text-align: center;
+    padding: 0rem 3.28rem;
+    letter-spacing: 3.24px;
+    transition: .2s ease;
+    &:hover {
+        color: $gray;
+    }
+}
+
+.slider-item {
+    min-height: 520px;
+    padding-bottom: 48px;
+}
+
+.slick-list,
+.draggable {
+    max-height: 520px;
+}
+
+.slick-dots {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    text-indent: -9999px;
+    padding: 8px 0 48px 0;
+    cursor: pointer;
+    &>li {
+        width: 8px;
+        height: 8px;
+        background: $gray;
+        opacity: 0.7;
+        margin-right: 7px;
+        margin-left: 6px;
+        transition: .3s ease;
+        &:hover {
+            background: $white;
+            opacity: 1;
+        }
+    }
+    &>li.slick-active {
+        background: $white;
+        opacity: 1;
+    }
+}
+
+.section-village {
+    margin-top: 100px;
+}
+
+.village-title {
+    color: $black;
+}
+
+.village-text {
+    &__description {
+        color: $black;
+        text-align: center;
+    }
 }

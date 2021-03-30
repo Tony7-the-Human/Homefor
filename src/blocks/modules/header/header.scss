@@ -4,9 +4,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 37px;
-    padding-bottom: 184px;
-    padding-left: 15px;
+    padding-top: 39px;
+    padding-bottom: 207px;
+    padding-left: 9px;
     padding-right: 15px;
     &-item {
         position: relative;
@@ -20,8 +20,7 @@
         transition: 0.3s ease;
         font-weight: 500;
         color: $white;
-        margin-right: 44px;
-        &::before {
+        margin-right: -16px &::before {
             content: '';
             position: absolute;
             display: block;
@@ -42,7 +41,7 @@
         transition: 0.3s ease;
         font-weight: 500;
         color: $white;
-        margin-right: 97px;
+        margin-right: 98px;
         &::before {
             content: '';
             position: absolute;
@@ -64,7 +63,8 @@
     background-image: url(../../../img/HOMEFOR.svg);
     width: 140px;
     height: 23px;
-    margin-right: 188px;
+    margin-right: 190px;
+    margin-left: 43px;
 }
 
 .nav {

@@ -11,7 +11,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: $white;
+    color: $black;
     overflow-x: hidden;
     box-sizing: border-box;
 }
@@ -35,6 +35,7 @@ body {
     &-text {
         text-align: center;
         &__description {
+            color: $white;
             margin: 35px 0px 68px;
             line-height: 1.34;
         }
@@ -42,7 +43,7 @@ body {
 }
 
 .title {
-    color: #ffffff;
+    color: $white;
     font-size: 60px;
     font-weight: 700;
     text-align: center;

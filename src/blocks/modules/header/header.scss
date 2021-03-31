@@ -1,12 +1,12 @@
 .header {
-    max-width: 1440px;
+    max-width: 1460px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 39px;
-    padding-bottom: 207px;
-    padding-left: 9px;
+    padding-top: 4px;
+    padding-bottom: 172px;
+    padding-left: 15px;
     padding-right: 15px;
     &-item {
         position: relative;
@@ -20,7 +20,8 @@
         transition: 0.3s ease;
         font-weight: 500;
         color: $white;
-        margin-right: -16px &::before {
+        margin-right: 17px;
+        &::before {
             content: '';
             position: absolute;
             display: block;
@@ -41,7 +42,7 @@
         transition: 0.3s ease;
         font-weight: 500;
         color: $white;
-        margin-right: 98px;
+        margin-right: 97px;
         &::before {
             content: '';
             position: absolute;
@@ -54,17 +55,22 @@
             background-size: cover;
             background-repeat: no-repeat;
         }
+        &:hover {
+            color: gray;
+        }
     }
 }
 
 .logo {
     display: block;
     background-repeat: no-repeat;
-    background-image: url(../../../img/HOMEFOR.svg);
-    width: 140px;
+    // background-image: url(../../../img/HOMEFOR.svg);
+    min-width: 140px;
     height: 23px;
-    margin-right: 190px;
-    margin-left: 43px;
+    margin-right: 157px;
+    margin-left: 16px;
+    background-color: $black;
+    padding: 35px 32px;
 }
 
 .nav {

@@ -64,6 +64,9 @@
     &__input {
         border: 1px solid black;
         padding: 22px 308px 19px 28px;
+        &:focus {
+            border: none;
+        }
     }
     // .form__text
     &__text {}

@@ -10,14 +10,14 @@
         line-height: 24px;
         letter-spacing: 0.68px;
         margin-right: 6px;
+        transition: .3s ease;
+        &:hover {
+            color: $gray;
+        }
     }
     // .footer__btn
     &__btn {}
 }
-
-.wrapper {}
-
-.footer-logo {}
 
 .footer-item {
     position: relative;

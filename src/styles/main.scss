@@ -495,24 +495,12 @@ body {
 }
 
 .plan-image {
+    background-image: url(../img/image-8.png);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
-    &:hover {
-        // content: '';
-        // position: absolute;
-        // display: inline;
-        // bottom: 0px;
-        // left: 0;
-        // width: 18px;
-        // height: 15px;
-        // background-size: cover;
-        // background-repeat: no-repeat;
-        // transition: .3s ease;
-        // padding: 12px;
-        // cursor: pointer;
-    }
+    height: 630px;
 }
 
 .plan-bagie {
@@ -714,7 +702,7 @@ body {
 }
 
 .section-news {
-    margin-bottom: 300px;
+    margin-bottom: 179px;
 }
 
 .news-text {

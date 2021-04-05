@@ -24,13 +24,16 @@
     <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jqueryui.com/resources/demos/style.css">
     <link rel="stylesheet" href="styles/main.css">
+
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
     </style>
+
 </head>
 
 <body>
@@ -97,22 +100,45 @@
                 <div class="filter-items">
                     <div class="filter-item">
                         <div class="filter-item__sqr">
-                            <a class="filter-item__text" href="">Площадь</a>
+                            <p class="filter-item__text">Площадь</p>
                         </div>
                         <div class="filter-item__size">
                             <input class="filter-item__input" type="text" id="check3"><label for="check3">м2</label>
                         </div>
+                        <div id="slider-range">
+                            <div class="slider-range-count">
+                                <p class="slider-range-count__value">0</p>
+                                <p class="slider-range-count__value">120</p>
+                                <p class="slider-range-count__value">1 000</p>
+                            </div>
+                        </div>
                     </div>
-
                     <div class="filter-item">
                         <div class="filter-item__price">
-                            <a class="filter-item__text" href="">Цена за м2</a>
+                            <p class="filter-item__text">Цена за м2</p>
                         </div>
                         <div class="filter-item__value">
                             <input class="filter-item__input" type="text" id="check3"><label for="check3">тыс.</label>
                         </div>
+                        <div id="slider-range02">
+                            <div class="slider-range-count">
+                                <p class="slider-range-count__value">0</p>
+                                <p class="slider-range-count__value">10 350</p>
+                                <p class="slider-range-count__value">98 000</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="filter-button">
+                <div class="filter-button-item">
+                    <button class="filter-button__reset">Сбросить фильтры</button>
+                </div>
+
+                <div class="filter-button-item">
+                    <button class="form__btn filter__btn">Показать</button>
+                </div>
+
             </div>
         </div>
     </section>
@@ -459,9 +485,40 @@
 
 
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(function() {
+            $("#slider-range").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [75, 300],
+                slide: function(event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range").slider("values", 0) +
+                " - $" + $("#slider-range").slider("values", 1));
+        });
+
+        $(function() {
+            $("#slider-range02").slider({
+                range: true,
+                min: 0,
+                max: 500,
+                values: [75, 300],
+                slide: function(event, ui) {
+                    $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                }
+            });
+            $("#amount").val("$" + $("#slider-range02").slider("values", 0) +
+                " - $" + $("#slider-range02").slider("values", 1));
+        });
+    </script>
     <script>
         $('.slider').slick({
             dots: true,

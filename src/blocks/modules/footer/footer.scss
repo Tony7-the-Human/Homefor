@@ -17,6 +17,26 @@
     }
 }
 
+.wrapper {
+    max-width: 1460px;
+    margin: 0 auto;
+    @media (max-width: 1440px) {
+        max-width: 1140px;
+    }
+    @media (max-width: 1200px) {
+        max-width: 960px;
+    }
+    @media (max-width: 990px) {
+        max-width: 767px;
+    }
+    @media (max-width: 767px) {
+        max-width: 576px;
+    }
+    @media (max-width: 576px) {
+        max-width: 100%;
+    }
+}
+
 .footer-item {
     position: relative;
     display: flex;

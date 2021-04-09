@@ -42,7 +42,7 @@
     <section class="section-main">
         @@include("../blocks/modules/header/header.html")
         <div class="wrapper">
-            <div class="slider ">
+            <div class="slider">
                 <div class="slider-child slider-display">
                     <div class="slider-item">
                         <div class="main-text">
@@ -541,13 +541,20 @@
     <script>
         $('.slider').slick({
             dots: true,
-            arrows: false,
             infinite: true,
             speed: 300,
             slidesToShow: 1,
             adaptiveHeight: true,
             slidesToScroll: 4,
             responsive: [{
+                breakpoint: 2700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
                 breakpoint: 1200,
                 settings: {
                     slidesToShow: 1,

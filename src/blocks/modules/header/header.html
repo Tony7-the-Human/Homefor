@@ -1,6 +1,6 @@
 <header class="header">
     <div class="header-item-1">
-        <button type="button" class="header__menu" data-toggle="modal" data-target="#menuModal"></button>
+        <button type="button" class="header__menu" style="font-size:30px;cursor:pointer" onclick="openNav()"></button>
     </div>
     <div class="header-item">
         <div class="logo">
@@ -19,4 +19,15 @@
         <a class="header__address" href="#">Екатеринбург</a>
         <a class="header__tel" href="tel:+73833456012">+7 (383) 345-60-12</a>
     </div>
+    <!-- mobile menu -->
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <div class="overlay-content">
+            <li class="nav-item"><a class="nav-link" href="#">Загородные</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Городские</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">О компании</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Наши новости</a></li>
+        </div>
+    </div>
+    <!-- /mobile menu -->
 </header>

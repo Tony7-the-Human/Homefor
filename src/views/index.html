@@ -508,6 +508,9 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 
+    <!-- <script>
+        
+    </script> -->
 
     <script>
         $(function() {
@@ -537,6 +540,14 @@
             $("#amount").val("$" + $("#slider-range02").slider("values", 0) +
                 " - $" + $("#slider-range02").slider("values", 1));
         });
+
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
     </script>
     <script>
         $('.slider').slick({
